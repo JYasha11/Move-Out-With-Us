@@ -7,7 +7,6 @@ export const FormProvider = ({ children }) => {
     const [formData, setFormData] = useState(() => {
         const localData = localStorage.getItem('formData');
         return localData ? JSON.parse(localData) : {
-
             gross: '',
             card: '',
             car: '',
@@ -16,12 +15,31 @@ export const FormProvider = ({ children }) => {
             down: '',
             loan: '',
             mortgage: '',
-            rating: ''
+            rating: '',
         };
     });
+
     useEffect(() => {
         localStorage.setItem('formData', JSON.stringify(formData));
     }, [formData]);
+
+    useEffect(() => {
+        const fetchMessage = async () => {
+            try {
+                const response = await fetch('http://localhost:5000/get-message');
+                if (response.ok) {
+                    const data = await response.json();
+                    setFormData(prevFormData => ({ ...prevFormData, ...data }));
+                } else {
+                    console.error('Failed to fetch message');
+                }
+            } catch (error) {
+                console.error('Error fetching message:', error);
+            }
+        };
+
+        fetchMessage();
+    }, []);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;

@@ -1,9 +1,7 @@
-// Card.js
 import React from 'react';
 import PropTypes from 'prop-types';
 
 const Card = ({ title, children, className, image, imageAlt }) => {
-    // Updated classes to center the card and make it half the width of the screen
     const cardClasses = `mb-8 mx-auto grid grid-cols-3 rounded-2xl overflow-hidden shadow-lg bg-white ${className} w-3/5`;
 
     return (

@@ -9,7 +9,10 @@ import Questions from './pages/questions';
 import Reject from './pages/reject';
 import About from './pages/about'
 import Chatbot from './pages/chatbot'
-import { FormProvider } from './api/formcontext'; // Make sure this import path is correct
+import Login from './pages/log-in'
+import Approve from './pages/approve'
+
+import { FormProvider } from './api/formcontext';
 
 const Routing = () => {
   return (
@@ -19,8 +22,10 @@ const Routing = () => {
         <Route exact path="/" element={<App />} />
         <Route path="/questions" element={<Questions />} />
         <Route path="/reject" element={<Reject />} />
+        <Route path="/approve" element={<Approve />} />
         <Route path="/about" element={<About />} />
         <Route path="/chatbot" element={<Chatbot />} />
+        <Route path="/log-in" element={<Login />} />
       </Routes>
       <Footer />
     </Router>

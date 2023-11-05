@@ -8,8 +8,12 @@ import home from '../assets/card-asset/home.png';
 import money from '../assets/card-asset/money.png';
 import rent from '../assets/card-asset/rent.png';
 import rejected from '../assets/card-asset/rejected.png';
-
-
+import approved from '../assets/card-asset/approved.png';
+import stable from '../assets/card-asset/stable-income.png';
+import goodcredit from '../assets/card-asset/good-credit.png';
+import stableincome from '../assets/card-asset/balance.png';
+import piggy from '../assets/card-asset/piggy.png';
+import worker from '../assets/card-asset/worker.png';
 
 const scenarios = {
     rejected: {
@@ -53,7 +57,43 @@ const scenarios = {
         content: 'This property is out of your budget, continue to save up and monitor real estate prices.',
         image: rent,
         imageAlt: 'rent'
-    }
+    },
+    approved: {
+        title: "Your Loan Has been Approved",
+        content: 'We believe you are ready to start your journey on becoming a homeowner',
+        image: approved,
+        imageAlt: 'approved',
+    },
+    stableIncome: {
+        title: 'Stable and Sufficient Income Verified',
+        content: 'Your consistent and reliable income stream demonstrates financial stability and the capability to meet mortgage obligations, which makes you an ideal candidate for a home loan.',
+        image: stable,
+        imageAlt: 'secure safe'
+    },
+    healthyCredit: {
+        title: 'Healthy Credit Score Achieved',
+        content: 'Your excellent credit score reflects responsible credit management and qualifies you for favorable loan conditions.',
+        image: goodcredit,
+        imageAlt: 'credit score meter'
+    },
+    goodDebtRatio: {
+        title: 'Favorable Debt-to-Income Ratio',
+        content: 'Your debt-to-income ratio is within the desirable range, ensuring you can comfortably afford your mortgage payments.',
+        image: stableincome,
+        imageAlt: 'balanced scales'
+    },
+    largeDownPayment: {
+        title: 'Significant Down Payment Available',
+        content: 'The substantial down payment you can provide reduces the loan amount and the interest, thereby enhancing the terms of your loan.',
+        image: piggy,
+        imageAlt: 'pile of cash'
+    },
+    employmentHistory: {
+        title: 'Proven Employment Stability',
+        content: 'Your long-term employment and career growth show a stable source of income, indicating reliability in meeting loan repayments.',
+        image: worker,
+        imageAlt: 'employment badge'
+    },
 };
 
 const replacePlaceholders = (content, values) => {

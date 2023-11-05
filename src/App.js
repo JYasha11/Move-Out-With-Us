@@ -49,8 +49,7 @@ function App() {
               className="max-w-xs md:max-w-sm lg:max-w-lg"
             />
             <p className="max-w-lg font-light text-2xl text-blue-900">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
+              Streamline your move with 'Move Out With Us,' the dynamic app that transforms data into decisions. Dive into our smart mortgage calculator, get instant approval insights, and visualize your financials with ease. Simplify your move and secure your future home confidently — all in a few taps with 'Move Out With Us            </p>
           </div>
         </div>
       </div>
