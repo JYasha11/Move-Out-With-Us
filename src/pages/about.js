@@ -30,7 +30,7 @@ export default function AboutPage() {
                     <div className="text-center">
                         <img src={Developer2} alt="Developer Yash" className="rounded-full w-24 h-24 mb-2 mx-auto" />
                         <h3 className="text-lg font-medium">Yash Mutnal</h3>
-                        <p className="text-sm text-gray-600">Backend Developer</p>
+                        <p className="text-sm text-gray-600">Full Stack Developer</p>
                     </div>
                     <div className="text-center">
                         <img src={Developer1} alt="Developer Jon" className="rounded-full w-24 h-24 mb-2 mx-auto" />
