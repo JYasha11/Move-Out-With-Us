@@ -2,17 +2,15 @@ import React from 'react';
 import ScenarioCard from '../components/cardScenario';
 import { useFormContext } from '../api/formcontext';
 
-//import house from '../assets/house-3.jpg'
-
 export default function Reject() {
+    const { formData } = useFormContext();
+    //console.log(formData);
     const valueMappings = {
         debtAmount: '',
         score: formData.rating,
         overage: '$15,000'
     };
 
-    const { formData } = useFormContext();
-    console.log(formData);
     return (
         <div className="flex h-screen bg-blue-100">
             <div className="mt-8 w-3/5 overflow-auto scrollbar-thin scrollbar-thumb-blue-700 scrollbar-track-blue-300">
