@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Marker</title>
+    <!-- The callback parameter is required, so we use console.debug as a noop -->
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0bF_qsp_2ZdySVBa77TU1Nxudsw7jBOc&callback=console.debug&libraries=maps,marker&v=beta">
+        </script>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+        gmp-map {
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <gmp-map center="32.9857292175293,-96.75128936767578" zoom="14" map-id="DEMO_MAP_ID">
+        <gmp-advanced-marker position="31.772561,-106.3874132" title="East Side, El Paso, TX - value: 206669.8351447376"
+            onclick="alert('Value is: 206669.8351447376');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="27.685483,-97.3838744"
+            title="South Side, Corpus Christi, TX - value: 259122.8939824148"
+            onclick="alert('Value is: 259122.8939824148');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.6827204,-95.593239" title="Alief, Houston, TX - value: 217004.27302745573"
+            onclick="alert('Value is: 217004.27302745573');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.6448324,-97.1022478"
+            title="Southeast, Arlington, TX - value: 320448.2684041535" onclick="alert('Value is: 320448.2684041535');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.710125,-97.08036010000001"
+            title="East, Arlington, TX - value: 252528.12704343387" onclick="alert('Value is: 252528.12704343387');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="27.7775346,-97.42846709999999"
+            title="Central City, Corpus Christi, TX - value: 115642.79372303252"
+            onclick="alert('Value is: 115642.79372303252');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="31.8523863,-106.5417508"
+            title="Northwest, El Paso, TX - value: 312704.7490985045" onclick="alert('Value is: 312704.7490985045');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.7159612,-97.16893499999999"
+            title="West, Arlington, TX - value: 322282.46929798665" onclick="alert('Value is: 322282.46929798665');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.7051747,-95.52128979999999"
+            title="Sharpstown, Houston, TX - value: 207418.68834714568"
+            onclick="alert('Value is: 207418.68834714568');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.75591159999999,-95.64454950000001"
+            title="Eldridge - West Oaks, Houston, TX - value: 328733.5242215807"
+            onclick="alert('Value is: 328733.5242215807');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.6282415,-95.4307937"
+            title="Central Southwest, Houston, TX - value: 215399.09239947973"
+            onclick="alert('Value is: 215399.09239947973');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.0500255,-95.18447739999999"
+            title="Kingwood, Houston, TX - value: 337815.50221049023" onclick="alert('Value is: 337815.50221049023');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.6015354,-95.2160675"
+            title="South Belt - Ellington, Houston, TX - value: 245992.93442623463"
+            onclick="alert('Value is: 245992.93442623463');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.556625,-95.0624713" title="Clear Lake, Houston, TX - value: 322992.9433692281"
+            onclick="alert('Value is: 322992.9433692281');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="31.9397232,-106.4077517"
+            title="Northeast, El Paso, TX - value: 182898.89063944257" onclick="alert('Value is: 182898.89063944257');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.6557112,-95.5280193"
+            title="Greater Fondren Southwest, Houston, TX - value: 234099.30696361247"
+            onclick="alert('Value is: 234099.30696361247');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.8594534,-95.3846774"
+            title="Northside-Northline, Houston, TX - value: 210285.6908279397"
+            onclick="alert('Value is: 210285.6908279397');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.734948,-95.471515"
+            title="Greater Uptown, Houston, TX - value: 395240.8486223139"
+            onclick="alert('Value is: 395240.8486223139');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.7374609,-95.5142195"
+            title="Woodlake - Briarmeadow, Houston, TX - value: 245822.32761019305"
+            onclick="alert('Value is: 245822.32761019305');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="27.5102263,-99.4803718"
+            title="Eastern Division, Laredo, TX - value: 152512.92793051593"
+            onclick="alert('Value is: 152512.92793051593');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.6851528,-95.29631150000002"
+            title="Golfcrest - Bellfort - Reveille, Houston, TX - value: 202812.45700355168"
+            onclick="alert('Value is: 202812.45700355168');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.6487679,-97.15804089999999"
+            title="Southwest, Arlington, TX - value: 351693.62464995607"
+            onclick="alert('Value is: 351693.62464995607');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.7725574,-95.575926" title="Memorial, Houston, TX - value: 617270.130836239"
+            onclick="alert('Value is: 617270.130836239');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.7962142,-95.39910499999999"
+            title="Greater Heights, Houston, TX - value: 600836.3216720739"
+            onclick="alert('Value is: 600836.3216720739');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.7164567,-95.4805999" title="Gulfton, Houston, TX - value: 188877.10852456884"
+            onclick="alert('Value is: 188877.10852456884');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.9406789,-95.41390559999999"
+            title="Greater Greenspoint, Houston, TX - value: 198611.24585741077"
+            onclick="alert('Value is: 198611.24585741077');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.735687,-97.10806559999999"
+            title="North, Arlington, TX - value: 401483.9149085865" onclick="alert('Value is: 401483.9149085865');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.8327499,-95.4448031"
+            title="Oak Forest - Garden Oaks, Houston, TX - value: 443753.6437622507"
+            onclick="alert('Value is: 443753.6437622507');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.7479902,-95.5720781"
+            title="Briarforest Area, Houston, TX - value: 380774.6151153328"
+            onclick="alert('Value is: 380774.6151153328');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="27.7118749,-97.35705759999999"
+            title="Bay Area, Corpus Christi, TX - value: 212011.70108834203"
+            onclick="alert('Value is: 212011.70108834203');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="31.6666667,-106.25" title="Lower Valley, El Paso, TX - value: 159645.20161586805"
+            onclick="alert('Value is: 159645.20161586805');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.86573869999999,-95.4804344"
+            title="Greater Inwood, Houston, TX - value: 221124.06166302843"
+            onclick="alert('Value is: 221124.06166302843');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.6938429,-95.6649468"
+            title="Mission Bend, Houston, TX - value: 262461.1999139861"
+            onclick="alert('Value is: 262461.1999139861');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.8132687,-95.6454759"
+            title="Addicks Park Ten, Houston, TX - value: 288018.5655258308"
+            onclick="alert('Value is: 288018.5655258308');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.7770697,-95.43549349999999"
+            title="Washington Avenue Coalition - Memorial Park, Houston, TX - value: 506834.1373477287"
+            onclick="alert('Value is: 506834.1373477287');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.7277555,-95.57166169999999"
+            title="Westchase, Houston, TX - value: 162493.88240185042" onclick="alert('Value is: 162493.88240185042');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.742668,-95.3991888"
+            title="Neartown - Montrose, Houston, TX - value: 586436.3948464309"
+            onclick="alert('Value is: 586436.3948464309');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.7908472,-95.5446297"
+            title="Spring Branch West, Houston, TX - value: 362978.3364639981"
+            onclick="alert('Value is: 362978.3364639981');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="33.1756598,-96.69598889999999"
+            title="Stonebridge Ranch, McKinney, TX - value: 596565.2879833073"
+            onclick="alert('Value is: 596565.2879833073');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.9359705,-96.9521236"
+            title="Valley Ranch, Irving, TX - value: 516907.9635418475" onclick="alert('Value is: 516907.9635418475');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="25.9029853,-97.4543626"
+            title="Southmost, Brownsville, TX - value: 137330.23071617083"
+            onclick="alert('Value is: 137330.23071617083');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.8140177,-96.9488945" title="Northwest, Irving, TX - value: 349287.3964332041"
+            onclick="alert('Value is: 349287.3964332041');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="31.7816612,-106.2490152"
+            title="Las Tierras, El Paso, TX - value: 220939.39607017065"
+            onclick="alert('Value is: 220939.39607017065');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.5953414,-95.4923678"
+            title="Fort Bend - Houston, Houston, TX - value: 215783.56266975487"
+            onclick="alert('Value is: 215783.56266975487');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.8481524,-95.3429072"
+            title="Eastex - Jensen Area, Houston, TX - value: 166470.61889423148"
+            onclick="alert('Value is: 166470.61889423148');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.7758059,-95.21826279999999"
+            title="Northshore, Houston, TX - value: 185206.12191936644"
+            onclick="alert('Value is: 185206.12191936644');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.870719,-95.436543" title="Acres Home, Houston, TX - value: 194870.0456113778"
+            onclick="alert('Value is: 194870.0456113778');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.8028554,-95.4754992"
+            title="Spring Branch East, Houston, TX - value: 457609.9157580182"
+            onclick="alert('Value is: 457609.9157580182');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.3923316,-97.708224"
+            title="North Austin, Austin, TX - value: 411015.3914804775" onclick="alert('Value is: 411015.3914804775');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.8652702,-96.960493" title="Cottonwood, Irving, TX - value: 448498.3799397683"
+            onclick="alert('Value is: 448498.3799397683');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.74129,-95.440033"
+            title="Greenway - Upper Kirby Area, Houston, TX - value: 496441.6353403364"
+            onclick="alert('Value is: 496441.6353403364');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.3649418,-98.4404665"
+            title="Highland Hills, San Antonio, TX - value: 167345.66715276218"
+            onclick="alert('Value is: 167345.66715276218');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.8110812,-95.5095815"
+            title="Spring Branch Central, Houston, TX - value: 350489.87707111804"
+            onclick="alert('Value is: 350489.87707111804');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.6254107,-95.28543690000001"
+            title="Greater Hobby Area, Houston, TX - value: 239670.2463333198"
+            onclick="alert('Value is: 239670.2463333198');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.6874666,-95.2461412"
+            title="Meadowbrook - Allendale, Houston, TX - value: 187705.19260133625"
+            onclick="alert('Value is: 187705.19260133625');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.9257086,-96.9913991"
+            title="Freeport/Hackberry, Irving, TX - value: 710813.9893418421"
+            onclick="alert('Value is: 710813.9893418421');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.7800656,-95.1675591"
+            title="Cloverleaf, Houston, TX - value: 220905.0248937968" onclick="alert('Value is: 220905.0248937968');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.7391075,-97.11443279999999"
+            title="Central, Arlington, TX - value: 261235.44251503295" onclick="alert('Value is: 261235.44251503295');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.4335043,-98.54209019999999"
+            title="Prospect Hill, San Antonio, TX - value: 120947.62492956224"
+            onclick="alert('Value is: 120947.62492956224');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.6641199,-95.36799409999999"
+            title="Sunnyside, Houston, TX - value: 162263.46415672242" onclick="alert('Value is: 162263.46415672242');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="33.1946514,-96.734714" title="Westridge, McKinney, TX - value: 498700.7145040626"
+            onclick="alert('Value is: 498700.7145040626');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.8033011,-95.36103910000001"
+            title="Northside Village, Houston, TX - value: 284918.1690008282"
+            onclick="alert('Value is: 284918.1690008282');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.4251905,-98.4945922"
+            title="People Active in Community Effort, San Antonio, TX - value: 190612.1354365528"
+            onclick="alert('Value is: 190612.1354365528');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="27.5226813,-99.50641189999999"
+            title="Western Division, Laredo, TX - value: 124075.05332774603"
+            onclick="alert('Value is: 124075.05332774603');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.0352775,-95.1083932"
+            title="Lake Houston, Houston, TX - value: 365204.9113882515"
+            onclick="alert('Value is: 365204.9113882515');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.6896577,-95.4400613"
+            title="Braeswood Place, Houston, TX - value: 536023.0218097639"
+            onclick="alert('Value is: 536023.0218097639');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.8714094,-95.3005979"
+            title="East Little York - Homestead, Houston, TX - value: 168410.17247102506"
+            onclick="alert('Value is: 168410.17247102506');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="31.7618778,-106.4850217"
+            title="Save the Valley 21, El Paso, TX - value: 157825.47469343842"
+            onclick="alert('Value is: 157825.47469343842');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.6276396,-95.35562329999999"
+            title="South Acres - Crestmont Park, Houston, TX - value: 190020.6586845705"
+            onclick="alert('Value is: 190020.6586845705');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.64539329999999,-95.2265511"
+            title="Edgebrook Area, Houston, TX - value: 207035.9757244833"
+            onclick="alert('Value is: 207035.9757244833');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.6536089,-95.4804133" title="Westbury, Houston, TX - value: 295912.7019982705"
+            onclick="alert('Value is: 295912.7019982705');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.8227034,-95.5452559"
+            title="Spring Branch North, Houston, TX - value: 364298.57449609553"
+            onclick="alert('Value is: 364298.57449609553');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.8349834,-95.2579968"
+            title="East Houston, Houston, TX - value: 165276.84708760437"
+            onclick="alert('Value is: 165276.84708760437');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.1862059,-95.5520414"
+            title="Sterling Ridge, Spring, TX - value: 609506.1478162353"
+            onclick="alert('Value is: 609506.1478162353');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="31.7754095,-106.3788087"
+            title="Cielo Vista, El Paso, TX - value: 222818.6743592997" onclick="alert('Value is: 222818.6743592997');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.6663268,-95.33720989999999"
+            title="South Park, Houston, TX - value: 146952.4334069651" onclick="alert('Value is: 146952.4334069651');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.5703699,-95.4174103"
+            title="Shadow Creek Ranch, Pearland, TX - value: 412666.128164557"
+            onclick="alert('Value is: 412666.128164557');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.8509122,-95.5154068"
+            title="Fairbanks - Northwest Crossing, Houston, TX - value: 262962.4294148444"
+            onclick="alert('Value is: 262962.4294148444');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.7867593,-97.35975859999999"
+            title="Far Greater Northside, Fort Worth, TX - value: 178966.3390611145"
+            onclick="alert('Value is: 178966.3390611145');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.7102924,-95.3563212" title="Macgregor, Houston, TX - value: 374539.3099064043"
+            onclick="alert('Value is: 374539.3099064043');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.2145859,-95.5277456"
+            title="Alden Bridge, Spring, TX - value: 465761.1971719296" onclick="alert('Value is: 465761.1971719296');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.6911506,-95.3528565"
+            title="Ost - South Union, Houston, TX - value: 177551.5029843465"
+            onclick="alert('Value is: 177551.5029843465');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.7761332,-95.32645"
+            title="Greater Fifth Ward, Houston, TX - value: 173226.53500851372"
+            onclick="alert('Value is: 173226.53500851372');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.686582,-95.4647224"
+            title="Meyerland Area, Houston, TX - value: 431797.97341827606"
+            onclick="alert('Value is: 431797.97341827606');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.8093788,-96.6227979"
+            title="Town East, Mesquite, TX - value: 258368.43026012575"
+            onclick="alert('Value is: 258368.43026012575');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.6753259,-95.5502207" title="Westwood, Houston, TX - value: 75844.67692240332"
+            onclick="alert('Value is: 75844.67692240332');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.2385146,-97.88848809999999"
+            title="West Oak Hill, Austin, TX - value: 641239.6437337502"
+            onclick="alert('Value is: 641239.6437337502');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.8243485,-96.9222552"
+            title="Irving Heights, Irving, TX - value: 277902.7690803023"
+            onclick="alert('Value is: 277902.7690803023');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.8733117,-97.29719539999999"
+            title="Summerfields, Fort Worth, TX - value: 287958.55062897387"
+            onclick="alert('Value is: 287958.55062897387');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.7943287,-95.7975553" title="Katy Manor, Katy, TX - value: 341423.8795180723"
+            onclick="alert('Value is: 341423.8795180723');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.8378822,-95.77974689999999"
+            title="Ventana Lakes, Katy, TX - value: 363718.7671957672" onclick="alert('Value is: 363718.7671957672');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.8481256,-95.7989971"
+            title="King Crossing, Katy, TX - value: 366362.5448717949" onclick="alert('Value is: 366362.5448717949');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.7559698,-95.3573194" title="Downtown, Houston, TX - value: 386417.4015559026"
+            onclick="alert('Value is: 386417.4015559026');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.6494382,-97.4029899"
+            title="Wedgwood, Fort Worth, TX - value: 295692.5548039121" onclick="alert('Value is: 295692.5548039121');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.718548,-95.4089487"
+            title="University Place, Houston, TX - value: 935709.3958516445"
+            onclick="alert('Value is: 935709.3958516445');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.8313761,-95.3020313"
+            title="Trinity - Houston Gardens, Houston, TX - value: 145961.5730667817"
+            onclick="alert('Value is: 145961.5730667817');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.4065779,-97.7478949"
+            title="Jollyville, Austin, TX - value: 477934.05857432046" onclick="alert('Value is: 477934.05857432046');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.6768908,-95.5283682" title="Braeburn, Houston, TX - value: 214925.76037199656"
+            onclick="alert('Value is: 214925.76037199656');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.9014029,-95.4001057" title="Aldine, Houston, TX - value: 199574.0366774368"
+            onclick="alert('Value is: 199574.0366774368');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.1412246,-95.4679791"
+            title="Grogan's Mill, Spring, TX - value: 423568.9104513107"
+            onclick="alert('Value is: 423568.9104513107');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.74129,-95.440033"
+            title="Astrodome Area, Houston, TX - value: 163126.17292506283"
+            onclick="alert('Value is: 163126.17292506283');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.5335884,-98.5528746"
+            title="Vance Jackson, San Antonio, TX - value: 302300.5553731558"
+            onclick="alert('Value is: 302300.5553731558');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.7743832,-95.3011399"
+            title="Denver Harbor - Port Houston, Houston, TX - value: 157055.09337953277"
+            onclick="alert('Value is: 157055.09337953277');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="27.6508559,-97.29766169999999"
+            title="Flour Bluff, Corpus Christi, TX - value: 232427.2107680185"
+            onclick="alert('Value is: 232427.2107680185');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.8834239,-96.9640847" title="MacArthur, Irving, TX - value: 294208.43110232893"
+            onclick="alert('Value is: 294208.43110232893');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.7278316,-95.3499071"
+            title="Greater Third Ward, Houston, TX - value: 290138.58091219765"
+            onclick="alert('Value is: 290138.58091219765');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.5961654,-95.68174760000001"
+            title="New Territory, Sugar Land, TX - value: 434880.3185222386"
+            onclick="alert('Value is: 434880.3185222386');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.0091382,-95.7562488" title="Fairfield, Cypress, TX - value: 395526.8568500392"
+            onclick="alert('Value is: 395526.8568500392');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.3105177,-97.69008459999999"
+            title="Windsor Park, Austin, TX - value: 505970.0057150146" onclick="alert('Value is: 505970.0057150146');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.240054,-97.83031489999999"
+            title="East Oak Hill, Austin, TX - value: 709471.5966801746"
+            onclick="alert('Value is: 709471.5966801746');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.7368538,-95.45324819999999"
+            title="Afton Oaks - River Oaks Area, Houston, TX - value: 1298329.119413023"
+            onclick="alert('Value is: 1298329.119413023');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="33.1312103,-96.718811"
+            title="Craig Ranch, McKinney, TX - value: 549366.1338501045"
+            onclick="alert('Value is: 549366.1338501045');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.9432318,-97.27337829999999"
+            title="Villages of Woodland Springs, Fort Worth, TX - value: 396193.2541325606"
+            onclick="alert('Value is: 396193.2541325606');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.8215183,-96.6503932"
+            title="Casa View Heights, Mesquite, TX - value: 241620.971485368"
+            onclick="alert('Value is: 241620.971485368');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.7371714,-95.2924745"
+            title="Magnolia Park, Houston, TX - value: 173622.69528211278"
+            onclick="alert('Value is: 173622.69528211278');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.29147,-97.74574439999999"
+            title="West University, Austin, TX - value: 390222.3142972436"
+            onclick="alert('Value is: 390222.3142972436');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.8049436,-97.33870499999999"
+            title="Diamond Hill - Jarvis, Fort Worth, TX - value: 180051.83504165264"
+            onclick="alert('Value is: 180051.83504165264');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.7180075,-95.43382919999999"
+            title="West University Place, Houston, TX - value: 1512302.564132983"
+            onclick="alert('Value is: 1512302.564132983');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="27.8004719,-97.53585389999999"
+            title="Northwest, Corpus Christi, TX - value: 219367.7883148065"
+            onclick="alert('Value is: 219367.7883148065');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.5322837,-98.6049916"
+            title="Alamo Farmsteads-Babcock Road, San Antonio, TX - value: 280531.3011751003"
+            onclick="alert('Value is: 280531.3011751003');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.7064733,-95.286076"
+            title="Pecan Park, Houston, TX - value: 188846.58617354315"
+            onclick="alert('Value is: 188846.58617354315');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.8186897,-96.998779" title="Bear Creek, Irving, TX - value: 364110.036742264"
+            onclick="alert('Value is: 364110.036742264');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.23471079999999,-97.7118003"
+            title="Pleasant Valley, Austin, TX - value: 357889.31120437285"
+            onclick="alert('Value is: 357889.31120437285');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.3262471,-98.5528746"
+            title="South Southwest, San Antonio, TX - value: 170922.23507755357"
+            onclick="alert('Value is: 170922.23507755357');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.8958605,-96.9588229"
+            title="Las Colinas, Irving, TX - value: 456246.9522849468" onclick="alert('Value is: 456246.9522849468');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.9931058,-95.34162549999999"
+            title="Iah - Airport Area, Houston, TX - value: 204901.37469211267"
+            onclick="alert('Value is: 204901.37469211267');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.18521299999999,-95.4904802"
+            title="Cochran's Crossing, Spring, TX - value: 557724.473318698"
+            onclick="alert('Value is: 557724.473318698');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.8016005,-95.438085"
+            title="Lazy Brook - Timbergrove, Houston, TX - value: 542195.7475993917"
+            onclick="alert('Value is: 542195.7475993917');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.759618,-96.55615429999999"
+            title="Creek Crossing, Mesquite, TX - value: 322651.2974126665"
+            onclick="alert('Value is: 322651.2974126665');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.8584384,-96.829506" title="Bluffview, Dallas, TX - value: 807986.1248282945"
+            onclick="alert('Value is: 807986.1248282945');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.1939634,-97.7446677"
+            title="Franklin Park, Austin, TX - value: 321334.81317446585"
+            onclick="alert('Value is: 321334.81317446585');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.4954542,-98.5259628"
+            title="Dellview Area, San Antonio, TX - value: 196351.03485723364"
+            onclick="alert('Value is: 196351.03485723364');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.6733001,-95.43988259999999"
+            title="Willow Meadows - Willowbend Area, Houston, TX - value: 333233.83807890955"
+            onclick="alert('Value is: 333233.83807890955');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="31.7800488,-106.3397004"
+            title="Album Park, El Paso, TX - value: 211477.24317512373"
+            onclick="alert('Value is: 211477.24317512373');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.422379,-99.8418696" title="Dyess, Abilene, TX - value: 146293.81793858128"
+            onclick="alert('Value is: 146293.81793858128');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.8361037,-96.9727577"
+            title="Plymouth Park, Irving, TX - value: 282897.08761173155"
+            onclick="alert('Value is: 282897.08761173155');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.7247703,-95.3112419"
+            title="Lawndale - Wayside, Houston, TX - value: 258509.59471574865"
+            onclick="alert('Value is: 258509.59471574865');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.0784997,-94.0958209"
+            title="South Park, Beaumont, TX - value: 67097.47100543226" onclick="alert('Value is: 67097.47100543226');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="27.8559476,-97.6301311"
+            title="Calallen, Corpus Christi, TX - value: 243947.8870565275"
+            onclick="alert('Value is: 243947.8870565275');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.5597785,-95.3677589"
+            title="Silverlake, Pearland, TX - value: 380561.4047791456" onclick="alert('Value is: 380561.4047791456');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.4922794,-98.65730839999999"
+            title="Great Northwest, San Antonio, TX - value: 247300.7159941981"
+            onclick="alert('Value is: 247300.7159941981');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.3879267,-98.5226283"
+            title="Palm Heights, San Antonio, TX - value: 143227.31022534423"
+            onclick="alert('Value is: 143227.31022534423');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.1578386,-95.5034957"
+            title="Panther Creek, Spring, TX - value: 401381.0872882616"
+            onclick="alert('Value is: 401381.0872882616');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.82841669999999,-95.3977159"
+            title="Independence Heights, Houston, TX - value: 245634.30964416743"
+            onclick="alert('Value is: 245634.30964416743');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.9850475,-95.18231379999999"
+            title="Eagle Springs, Atascocita, TX - value: 326293.1185064935"
+            onclick="alert('Value is: 326293.1185064935');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.5574803,-98.53503599999999"
+            title="North Central, San Antonio, TX - value: 194124.69950926292"
+            onclick="alert('Value is: 194124.69950926292');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="31.8304343,-106.5288374"
+            title="Five Points, El Paso, TX - value: 154922.83083445035"
+            onclick="alert('Value is: 154922.83083445035');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.2729209,-97.74438630000002"
+            title="Downtown, Austin, TX - value: 737496.5483246356" onclick="alert('Value is: 737496.5483246356');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.694237,-95.717734"
+            title="Grand Mission, Richmond, TX - value: 380416.50224215246"
+            onclick="alert('Value is: 380416.50224215246');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.6421136,-98.48943650000001"
+            title="Stone Oak, San Antonio, TX - value: 430318.4124463157"
+            onclick="alert('Value is: 430318.4124463157');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.6979703,-95.29654629999999"
+            title="Gulfgate Riverview - Pine Valley, Houston, TX - value: 196640.2589263089"
+            onclick="alert('Value is: 196640.2589263089');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.2313978,-97.7166548" title="Riverside, Austin, TX - value: 660398.0391248114"
+            onclick="alert('Value is: 660398.0391248114');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.4305734,-98.6765618"
+            title="Heritage, San Antonio, TX - value: 228294.2024673569"
+            onclick="alert('Value is: 228294.2024673569');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.627977,-96.3344068"
+            title="Central College Station, College Station, TX - value: 260780.81280488303"
+            onclick="alert('Value is: 260780.81280488303');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.8337533,-96.85552860000001"
+            title="Love Field Area, Dallas, TX - value: 257478.3915213776"
+            onclick="alert('Value is: 257478.3915213776');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.4460353,-97.67945069999999"
+            title="Wells Branch, Austin, TX - value: 412094.67952988576"
+            onclick="alert('Value is: 412094.67952988576');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="33.19035628491384,-96.84585217738704"
+            title="Panther Creek, Frisco, TX - value: 602539.1570118754"
+            onclick="alert('Value is: 602539.1570118754');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.740795,-95.3756344" title="Midtown, Houston, TX - value: 363569.74652169854"
+            onclick="alert('Value is: 363569.74652169854');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="31.5500848,-97.11354" title="Baylor, Waco, TX - value: 210965.3073587638"
+            onclick="alert('Value is: 210965.3073587638');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.8815682,-97.27337829999999"
+            title="Park Glen, Fort Worth, TX - value: 363837.0036913259"
+            onclick="alert('Value is: 363837.0036913259');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.8018741,-95.1458131"
+            title="Sterling Green, Channelview, TX - value: 216654.92673267328"
+            onclick="alert('Value is: 216654.92673267328');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.9010539,-95.7243879"
+            title="Canyon Lakes West, Cypress, TX - value: 385730.154676259"
+            onclick="alert('Value is: 385730.154676259');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.7857841,-95.8145897" title="Old Katy, Katy, TX - value: 343431.5419058553"
+            onclick="alert('Value is: 343431.5419058553');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.6654582,-95.6854983" title="Aliana, Richmond, TX - value: 555128.2232142857"
+            onclick="alert('Value is: 555128.2232142857');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.6922609,-97.34355389999999"
+            title="Rosemont, Fort Worth, TX - value: 174238.21519663467"
+            onclick="alert('Value is: 174238.21519663467');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.0971621,-95.6160549"
+            title="Villages of Northpointe, Tomball, TX - value: 378256.7912578056"
+            onclick="alert('Value is: 378256.7912578056');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="33.1604742,-96.8739702" title="The Trails, Frisco, TX - value: 678165.1616585659"
+            onclick="alert('Value is: 678165.1616585659');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.7510926,-95.3240014"
+            title="Second Ward, Houston, TX - value: 290339.9544190769" onclick="alert('Value is: 290339.9544190769');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.9884045,-95.71564169999999"
+            title="Cypress Lakes, Cypress, TX - value: 336647.008961697" onclick="alert('Value is: 336647.008961697');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="31.7719267,-106.4615501" title="Central, El Paso, TX - value: 159812.89411956145"
+            onclick="alert('Value is: 159812.89411956145');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.2088183,-97.8047019"
+            title="Garrison Park, Austin, TX - value: 467191.46841441846"
+            onclick="alert('Value is: 467191.46841441846');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.8926582,-95.71024"
+            title="Cypress Springs, Cypress, TX - value: 259503.06464646463"
+            onclick="alert('Value is: 259503.06464646463');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.7766642,-96.79698789999999"
+            title="Near East, Dallas, TX - value: 628833.5252279831" onclick="alert('Value is: 628833.5252279831');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.112192,-95.38857689999999"
+            title="Ledgends Ranch, Spring, TX - value: 331561.89732968324"
+            onclick="alert('Value is: 331561.89732968324');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="31.8664949,-106.414986"
+            title="Mountain View, El Paso, TX - value: 143300.20993521213"
+            onclick="alert('Value is: 143300.20993521213');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.3393252,-97.746952" title="Allandale, Austin, TX - value: 819046.9372501472"
+            onclick="alert('Value is: 819046.9372501472');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.7439849,-97.2726643"
+            title="West Meadowbrook, Fort Worth, TX - value: 196356.81387707047"
+            onclick="alert('Value is: 196356.81387707047');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.7866798,-96.9775569"
+            title="Running Bear, Irving, TX - value: 309356.936030311" onclick="alert('Value is: 309356.936030311');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.5117422,-98.4897345"
+            title="Shearer Hills - Ridgeview, San Antonio, TX - value: 249669.6569482388"
+            onclick="alert('Value is: 249669.6569482388');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.5721574,-95.5433542"
+            title="Quail Valley, Missouri City, TX - value: 287208.1362545018"
+            onclick="alert('Value is: 287208.1362545018');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.4736259,-98.52602669999999"
+            title="Los Angeles Heights - Keystone, San Antonio, TX - value: 172010.86105895095"
+            onclick="alert('Value is: 172010.86105895095');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.0877356,-94.1226849"
+            title="North End, Beaumont, TX - value: 65790.93728316866" onclick="alert('Value is: 65790.93728316866');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.7867593,-97.35975859999999"
+            title="North Side, Fort Worth, TX - value: 176838.35263355775"
+            onclick="alert('Value is: 176838.35263355775');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.5081082,-98.6793127"
+            title="Northwest Crossing, San Antonio, TX - value: 254932.50818553576"
+            onclick="alert('Value is: 254932.50818553576');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.9416535,-95.71024"
+            title="Cypress Creek Lakes, Cypress, TX - value: 559364.1771253517"
+            onclick="alert('Value is: 559364.1771253517');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.9013244,-95.7218405"
+            title="Mirabella, Cypress, TX - value: 447924.49720670393" onclick="alert('Value is: 447924.49720670393');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.73570179999999,-95.3339582"
+            title="Greater Eastwood, Houston, TX - value: 311711.4513287202"
+            onclick="alert('Value is: 311711.4513287202');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.5541259,-95.6757811"
+            title="Greatwood, Sugar Land, TX - value: 466102.1726677578"
+            onclick="alert('Value is: 466102.1726677578');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.73950689999999,-97.2074634"
+            title="Handley, Fort Worth, TX - value: 233840.68317250672"
+            onclick="alert('Value is: 233840.68317250672');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.7182151,-97.7145152"
+            title="Sun City, Georgetown, TX - value: 425073.1578963043" onclick="alert('Value is: 425073.1578963043');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.2295806,-97.69706509999999"
+            title="Montopolis, Austin, TX - value: 397222.27010763926" onclick="alert('Value is: 397222.27010763926');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.4098297,-98.63940520000001"
+            title="Lackland Terrace, San Antonio, TX - value: 175830.79403659143"
+            onclick="alert('Value is: 175830.79403659143');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.3911419,-97.72183319999999"
+            title="North Burnett, Austin, TX - value: 261186.699973752" onclick="alert('Value is: 261186.699973752');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.5993251,-96.3202811"
+            title="South Knoll, College Station, TX - value: 256978.5418921318"
+            onclick="alert('Value is: 256978.5418921318');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.3927104,-98.4612389"
+            title="Highland Park, San Antonio, TX - value: 176630.84328046907"
+            onclick="alert('Value is: 176630.84328046907');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.5068213,-98.4475458"
+            title="Oak Park - Northwood, San Antonio, TX - value: 465060.088573035"
+            onclick="alert('Value is: 465060.088573035');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="30.330898,-97.73160650000001"
+            title="Brentwood, Austin, TX - value: 663367.6213800904" onclick="alert('Value is: 663367.6213800904');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.7733673,-97.22909659999999"
+            title="Woodhaven, Fort Worth, TX - value: 334163.6603429822"
+            onclick="alert('Value is: 334163.6603429822');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="29.80038609999999,-95.3169786"
+            title="Kashmere Gardens, Houston, TX - value: 149578.75782376857"
+            onclick="alert('Value is: 149578.75782376857');">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="32.4648039,-99.770657"
+            title="Westwood Richland, Abilene, TX - value: 158984.8262417057"
+            onclick="alert('Value is: 158984.8262417057');">
+        </gmp-advanced-marker>
+
+    </gmp-map>
+</body>
+
+</html>
