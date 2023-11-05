@@ -9,6 +9,7 @@ __pycache__/
 /node_modules
 /.pnp
 .pnp.js
+.venv
 
 # testing
 /coverage
