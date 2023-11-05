@@ -6,6 +6,7 @@ import App from './App';
 import Header from './components/header';
 import Footer from './components/footer';
 import Questions from './pages/questions'
+import Reject from './pages/reject';
 
 const Routing = () => {
   return (
@@ -14,6 +15,8 @@ const Routing = () => {
       <Routes>
         <Route exact path="/" element={<App />} />
         <Route path="/questions" element={<Questions />} />
+        <Route path="/reject" element={<Reject />} />
+
       </Routes>
       <Footer />
     </Router>
